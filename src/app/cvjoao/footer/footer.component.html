@@ -1,0 +1,10 @@
+<footer class="text-center">
+    <div class="links">
+    <ng-container *ngFor="let item of cvFile.information.url">
+        <a href="{{item.link}}" class="btn btn-outline-light btn-floating m-1" target="_blank"><i class="bi bi-{{ item.name | lowercase }} icon"></i></a>
+    </ng-container>
+    </div>
+    <div class="copyright">
+      © {{currentYear}} Copyright
+    </div>
+</footer>

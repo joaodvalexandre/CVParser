@@ -1,0 +1,20 @@
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+::ng-deep html, ::ng-deep body {
+    height: 100%;
+    margin: 0;
+}
+
+.profile-picture {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.logo {
+    max-height: 75px;
+    max-width: 75px;
+}
+
+.container {
+    padding: 20px 0;
+}

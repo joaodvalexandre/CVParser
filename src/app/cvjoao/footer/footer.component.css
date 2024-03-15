@@ -1,0 +1,48 @@
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+footer{
+    position:fixed;
+    bottom:0px;
+    width:100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #55d6aa;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+}
+
+.links {
+    background: #55d6aa;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.links a {
+    color: black;
+    background-color: #55d6aa;
+    transition: background-color 0.5s ease-in-out;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    margin: 0 10px 0 10px;
+}
+
+.links a:hover {
+    background-color: #40a784;
+}
+
+.icon {
+    font-size: 32px;
+}
+
+.copyright {
+    background: #000;
+    color: #fff;
+}

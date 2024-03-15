@@ -1,0 +1,180 @@
+{
+    "information": {
+        "name": "João Alexandre",
+        "picture": "/assets/pic.jpg",
+        "current_position": "Unemployed",
+        "location": "Albergaria-a-Velha, Aveiro, Portugal",
+        "contact": "+351 962 370 926",
+        "email": "joao.daniel.alexandre43@gmail.com",
+        "description": "Informatic Technician oriented towards Backend, Frontend and Fullstack Development, professional and motivated to learn new technologies, work with new interesting functionalities and always available to help my colleagues.",
+        "soft_skills": [
+            "Responsible",
+            "Adaptable",
+            "Problem-Solver",
+            "Resourceful",
+            "Creative"
+        ],
+        "skills": [
+            "SQL",
+            "Software Development",
+            "Microsoft Office",
+            "Web Development",
+            "CakePHP",
+            "JavaScript",
+            "PHP",
+            "Front-end Development",
+            "Python (Programming Language)",
+            "Microsoft SQL Server",
+            "Scrum",
+            "Game Development",
+            "jQuery",
+            "Unity",
+            "Java",
+            "Yii",
+            "Microsoft Excel",
+            "HTML",
+            "NetBeans",
+            "Visual Studio",
+            "C#",
+            "Node.js",
+            "Git",
+            "MySQL",
+            "English",
+            "Portuguese",
+            "Cascading Style Sheets (CSS)",
+            "Notepad++",
+            "PhpStorm",
+            "Twig",
+            "Behat",
+            "Gitlab",
+            "Full-Stack Development",
+            "Adobe Premiere Pro"
+        ],
+        "top5_skills": [
+            "JavaScript",
+            "PHP",
+            "HTML",
+            "CSS",
+            "SQL"
+        ],
+        "languages": [
+            {"language": "Portuguese", "level": "Native / Bilingual"},
+            {"language": "English", "level": "Native / Bilingual"}
+        ],
+        "url": [
+            {"name": "LinkedIn", "link": "https://www.linkedin.com/in/joaodvalexandre/"},
+            {"name": "Github", "link": "https://www.github.com/joaodvalexandre"},
+            {"name": "Facebook", "link": "https://www.facebook.com/joao.alexandre.79656"},
+            {"name": "Instagram", "link": "https://www.instagram.com/joao.d.alexandre"}
+        ]
+    },
+    "experiences": [
+        {
+            "company_name": "Synopsys Inc.",
+            "company_logo": "https://media.licdn.com/dms/image/C4E0BAQEq7MVORIs3MA/company-logo_200_200/0/1631306256041?e=1717027200&v=beta&t=UIKCyZpRNJ40E7q0Y8Fne1inIHFTzeoX7kadk1hLRJY",
+            "position": "Frontend Developer",
+            "start_date": "08/2022",
+            "end_date": "02/2024",
+            "location": "Porto Salvo, Portugal",
+            "description": "Creation of new pages for consulting, as well as improve on speed and readability of the code for already existing pages, using Native HTML, CSS and JavaScript.<br>Helped implement new functionalities into the page, as well as new ways of consulting the data, for example, implementing new search boxes into the existing tables.<br>Created some documentation for one of the web pages already created, to help the client understand how it works.<br>Helped backend development, using python to execute SQL, and return a JSON object for the frontend part.",
+            "tools_used": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "jQuery",
+                "SQL",
+                "Python",
+                "Microsoft Office"
+            ]
+        },
+        {
+            "company_name": "NTT Data Services",
+            "company_logo": "https://media.licdn.com/dms/image/D4E0BAQFGbJcePCYbQw/company-logo_200_200/0/1698840606005/ntt_data_americas_logo?e=1717027200&v=beta&t=Q2CQcm1jqOdsTXH5QMOwIL_KFXLoTe5ansomfl3-5rc",
+            "position": "Assistant Consultant",
+            "start_date": "02/2021",
+            "end_date": "08/2022",
+            "location": "Saldanha, Portugal",
+            "description": "Helped develop a website, using Drupal framework for EDP, to be used internally by the company, to manage and present news about the company.<br><br>Developed and managed web pages created using SharePoint integrated into Teams, to create a Virtual Community for EDP.<br>Also worked with Adobe Premiere to create Introduction videos for the created community.<br><br>Created new functionalities for testing the Website for the European Patent Office, using Behat.<br>Also did some manual testing on top of the automated one, as well as update the documentation for the page in Confluence, and create a presentation for the monthly update.",
+            "tools_used": [
+                "PHP",
+                "Drupal",
+                "Behat",
+                "Microsoft Office",
+                "Adobe Premiere Pro",
+                "SharePoint"
+            ]
+        },
+        {
+            "company_name": "Eugster Frismag AG",
+            "company_logo": "https://media.licdn.com/dms/image/C560BAQH0R9uG_YzTOA/company-logo_200_200/0/1631404558393?e=1717027200&v=beta&t=-fcogk7GeJRz3sctQrmjKcb8TTyfLqGVAL7W6IlT2ns",
+            "position": "Fullstack Developer",
+            "start_date": "08/2018",
+            "end_date": "01/2021",
+            "location": "Torres Vedras, Portugal",
+            "description": "Started in the team as a Fullstack Developer, helping in the development of the internal website used in the production lines, with my responsibilities being more focused in development and improvement of software and response to incidents.<br>Responsible for configuring a Windows server, for example, installing and configuring xampp and setup of sourcetree, with that I was able to facilitate deploying the changes to the existing applications.<br>Responsible for training in some projects developed, for example, new projects made, as well as some used internal tools, usually in presentation format for both the development team and the Business Application team.",
+            "tools_used": [
+                "CakePHP",
+                "Laravel",
+                "jQuery",
+                "JavaScript",
+                "SQL Server",
+                "MySQL",
+                "Lumen",
+                "HTML",
+                "CSS",
+                "PHPStorm",
+                "Git",
+                "SourceTree",
+                "Microsoft Office",
+                "Visual Studio Code",
+                "SQL Server Management Studio",
+                "MySQL Workbench"
+            ]
+        },
+        {
+            "company_name": "Suntransfers.com",
+            "company_logo": "https://media.licdn.com/dms/image/D4D0BAQFMvGtYkLAGNQ/company-logo_200_200/0/1704369042551/suntransfers_com_logo?e=1717027200&v=beta&t=vtYAIK5768gSxRzw8NyF_DdmaGvgcc1lQMywBAKw5nQ",
+            "position": "Intern Fullstack Developer",
+            "start_date": "05/2017",
+            "end_date": "07/2017",
+            "location": "Poblenou, Spain",
+            "description": "Internship in Erasmus context, as a process to complement the last year of the Programming of Informatics System's course, I had the opportunity to be exposed to a business and culture different from Portugal during this period.<br>I was responsible for the development of new functionalities and maintenance of the internal website (used by the administrators to configure the data on the public site), and also the public website.",
+            "tools_used": [
+                "Yii",
+                "Behat",
+                "Twig"
+            ]
+        },
+        {
+            "company_name": "Eugster Frismag AG",
+            "company_logo": "https://media.licdn.com/dms/image/C560BAQH0R9uG_YzTOA/company-logo_200_200/0/1631404558393?e=1717027200&v=beta&t=-fcogk7GeJRz3sctQrmjKcb8TTyfLqGVAL7W6IlT2ns",
+            "position": "Intern Fullstack Developer",
+            "start_date": "05/2016",
+            "end_date": "07/2016",
+            "location": "Torres Vedras, Portugal",
+            "description": "Internship done in the company Eugster Frismag AG in context for the second year of the course.<br>During this time, I learned how to work with CakePHP, and a bit of JavaScript.<br>After finishing my internship, one of the developers, after liking my performance in the 3 months of internship, he called me after finishing the course, offering me a job at the company as an employee.",
+            "tools_used": [
+                "CakePHP",
+                "PHP",
+                "NetBeans",
+                "HTML",
+                "JavaScript",
+                "CSS",
+                "jQuery"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "school_name": "Henriques Nogueira School",
+            "school_logo": "https://insidestem.eu/wp-content/uploads/2021/07/inside-AEHN-partner-400px.jpg",
+            "course": "Programming of Informatic Systems",
+            "position": "Student",
+            "start_date": "09/2014",
+            "end_date": "07/2018",
+            "school_year": "12",
+            "final_grade": "14",
+            "description": "Course of Programming of Informatic Systems, that had the duration of 4 years.<br>I learned to work with various programming languages, such as Java, HTML, SQL, SQLite, PHP,JavaScript, jQuery and CSS.<br>Final grade of the course was a 14, where I presented a game developed in Unity, using C# as aprogramming language to create the scripts."
+        }
+    ]
+}

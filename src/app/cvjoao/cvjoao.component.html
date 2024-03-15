@@ -1,0 +1,50 @@
+<div class="container">
+    <div>
+        {{cvFile.information.name}}<br>
+        <img class="profile-picture" src="{{cvFile.information.picture}}"><br>
+        {{cvFile.information.current_position}}<br>
+        {{cvFile.information.location}}<br>
+        <p #contact>{{cvFile.information.contact}}<br></p>
+        {{cvFile.information.email}}<br>
+        <p #description>{{cvFile.information.description}}<br></p>
+        {{cvFile.information.soft_skills}}<br>
+        {{cvFile.information.skills}}<br>
+        <ul *ngFor="let item of cvFile.information.languages">
+            <li>
+                {{item.language}} - {{item.level}}
+            </li>
+        </ul><br>
+        <ul *ngFor="let item of cvFile.information.url">
+            <li>
+                {{item.name}} 
+            </li>
+        </ul><br>
+    </div>
+    <div>
+        <ul *ngFor="let item of cvFile.experiences">
+            <li>
+                <img class="logo" src="{{item.company_logo}}"><br>
+                {{item.company_name}} <br>
+                {{item.position}} <br>
+                {{item.start_date}} - {{item.end_date}} <br>
+                {{item.location}} <br>
+                {{item.description}} <br>
+                {{item.tools_used}} <br>
+            </li>
+        </ul><br>
+    </div>
+    <div>
+        <ul *ngFor="let item of cvFile.education">
+            <li>
+                <img class="logo" src="{{item.school_logo}}"><br>
+                {{item.school_name}} <br>
+                {{item.course}} <br>
+                {{item.position}} <br>
+                {{item.start_date}} - {{item.end_date}} <br>
+                {{item.school_year}} <br>
+                {{item.final_grade}} <br>
+                {{item.description}} <br>
+            </li>
+        </ul>
+    </div>
+</div>
