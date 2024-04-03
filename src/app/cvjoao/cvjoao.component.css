@@ -5,6 +5,10 @@
     margin: 0;
 }
 
+* {
+    font-family: "Metrophobic", sans-serif;
+}
+
 .profile-picture {
     max-width: 200px;
     max-height: 200px;
@@ -17,4 +21,68 @@
 
 .container {
     padding: 20px 0;
+}
+
+.main-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: calc(100vh - 134px);
+    background: url('../../assets/pics/background.png');
+    color: black;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.main-header span {
+    padding-left: 100px;
+}
+
+.description {
+    width: 60%;
+}
+
+.about-section span {
+    padding-left: 20px;
+}
+
+.name {
+    font-size: 72px;
+}
+
+.main-position {
+    font-size: 48px;
+    padding-bottom: 200px;
+}
+
+.hard-soft-skills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hard-skills {
+    width: 50%;
+}
+
+.soft-skills {
+    width: 50%;
+}
+
+.green-progress {
+    background: #55d6aa;
+    color: black;
 }

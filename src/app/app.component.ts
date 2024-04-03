@@ -16,6 +16,13 @@ import { FooterComponent } from './cvjoao/footer/footer.component'
   animations: [ slider ]
 })
 export class AppComponent {
+  handleScrollToTop() {
+    const scrollableElement = document.querySelector('main');
+    if (scrollableElement) {
+      scrollableElement.scrollTop = 0;
+    }
+  }
+
   prepareRoute(outlet: RouterOutlet){
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }

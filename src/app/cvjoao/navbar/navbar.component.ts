@@ -1,7 +1,6 @@
 import { CommonModule, NgFor } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-
 
 @Component({
   selector: 'app-navbar',
@@ -12,4 +11,9 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 })
 
 export class NavbarComponent {
+  @Output() scrollToTopEvent = new EventEmitter<void>();
+
+  triggerScrollToTop() {
+    this.scrollToTopEvent.emit();
+  }
 }

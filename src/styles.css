@@ -1,3 +1,7 @@
 main {
     position: relative;
 }
+
+body {
+    font-family: "Metrophobic", sans-serif;
+}

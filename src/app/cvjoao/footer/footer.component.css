@@ -1,6 +1,7 @@
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
 footer{
+    font-family: "Mulish", sans-serif;
     position:fixed;
     bottom:0px;
     width:100%;

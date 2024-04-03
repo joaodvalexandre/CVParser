@@ -1,8 +1,33 @@
+<div class="main-header">
+    <span class="name">{{cvFile.information.name}}</span>
+    <span class="main-position">{{cvFile.information.main_position}}</span>
+</div>
+
 <div class="container">
-    <div>
+    <div class="about-section">
+        <h1>About me</h1>
+        <span><img class="profile-picture" src="{{cvFile.information.picture}}"></span>
+        <span class="description">{{cvFile.information.description}}</span>
+    </div>
+    <div class="hard-soft-skills">
+        <div class="hard-skills">
+            <h1>Hard Skills</h1>
+            <div *ngFor="let item of cvFile.information.top5_skills">
+                <span>{{item.skill}}</span>
+                <div class="progress">
+                    <div class="progress-bar green-progress" role="progressbar" [style.width]="item.level+'0%'">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="soft-skills">
+            <h1>Soft Skills</h1>
+        </div> -->
+    </div>
+    <!-- <div>
         {{cvFile.information.name}}<br>
         <img class="profile-picture" src="{{cvFile.information.picture}}"><br>
-        {{cvFile.information.current_position}}<br>
         {{cvFile.information.location}}<br>
         <p #contact>{{cvFile.information.contact}}<br></p>
         {{cvFile.information.email}}<br>
@@ -20,7 +45,7 @@
             </li>
         </ul><br>
     </div>
-    <!-- <div>
+    <div>
         <ul *ngFor="let item of cvFile.experiences">
             <li>
                 <img class="logo" src="{{item.company_logo}}"><br>

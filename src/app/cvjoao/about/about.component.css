@@ -5,6 +5,10 @@
     margin: 0;
 }
 
+* {
+    font-family: "Metrophobic", sans-serif;
+}
+
 .body {
     display: flex;
     flex-flow: column;

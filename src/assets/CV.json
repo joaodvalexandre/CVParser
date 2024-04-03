@@ -3,6 +3,7 @@
         "name": "João Alexandre",
         "picture": "/assets/pic.jpg",
         "current_position": "Unemployed",
+        "main_position": "Developer",
         "location": "Albergaria-a-Velha, Aveiro, Portugal",
         "contact": "+351 962 370 926",
         "email": "joao.daniel.alexandre43@gmail.com",
@@ -51,21 +52,21 @@
             "Adobe Premiere Pro"
         ],
         "top5_skills": [
-            "JavaScript",
-            "PHP",
-            "HTML",
-            "CSS",
-            "SQL"
+            {"skill": "JavaScript", "level": 8},
+            {"skill": "PHP",        "level": 7},
+            {"skill": "HTML",       "level": 9},
+            {"skill": "CSS",        "level": 6},
+            {"skill": "SQL",        "level": 5}
         ],
         "languages": [
-            {"language": "Portuguese", "level": "Native / Bilingual"},
-            {"language": "English", "level": "Native / Bilingual"}
+            {"language": "Portuguese",  "level": "Native / Bilingual"},
+            {"language": "English",     "level": "Native / Bilingual"}
         ],
         "url": [
-            {"name": "LinkedIn", "link": "https://www.linkedin.com/in/joaodvalexandre/"},
-            {"name": "Github", "link": "https://www.github.com/joaodvalexandre"},
-            {"name": "Facebook", "link": "https://www.facebook.com/joao.alexandre.79656"},
-            {"name": "Instagram", "link": "https://www.instagram.com/joao.d.alexandre"}
+            {"name": "LinkedIn",    "link": "https://www.linkedin.com/in/joaodvalexandre/"},
+            {"name": "Github",      "link": "https://www.github.com/joaodvalexandre"},
+            {"name": "Facebook",    "link": "https://www.facebook.com/joao.alexandre.79656"},
+            {"name": "Instagram",   "link": "https://www.instagram.com/joao.d.alexandre"}
         ]
     },
     "experiences": [
