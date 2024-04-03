@@ -59,7 +59,7 @@ import {
   ɵɵinject,
   ɵɵinjectAttribute,
   ɵɵstyleProp
-} from "./chunk-B5LUOZ3Q.js";
+} from "./chunk-KJBDP7EP.js";
 
 // node_modules/@angular/common/fesm2022/common.mjs
 var _DOM = null;
@@ -810,23 +810,80 @@ var FormatWidth;
   FormatWidth2[FormatWidth2["Long"] = 2] = "Long";
   FormatWidth2[FormatWidth2["Full"] = 3] = "Full";
 })(FormatWidth || (FormatWidth = {}));
-var NumberSymbol;
-(function(NumberSymbol2) {
-  NumberSymbol2[NumberSymbol2["Decimal"] = 0] = "Decimal";
-  NumberSymbol2[NumberSymbol2["Group"] = 1] = "Group";
-  NumberSymbol2[NumberSymbol2["List"] = 2] = "List";
-  NumberSymbol2[NumberSymbol2["PercentSign"] = 3] = "PercentSign";
-  NumberSymbol2[NumberSymbol2["PlusSign"] = 4] = "PlusSign";
-  NumberSymbol2[NumberSymbol2["MinusSign"] = 5] = "MinusSign";
-  NumberSymbol2[NumberSymbol2["Exponential"] = 6] = "Exponential";
-  NumberSymbol2[NumberSymbol2["SuperscriptingExponent"] = 7] = "SuperscriptingExponent";
-  NumberSymbol2[NumberSymbol2["PerMille"] = 8] = "PerMille";
-  NumberSymbol2[NumberSymbol2["Infinity"] = 9] = "Infinity";
-  NumberSymbol2[NumberSymbol2["NaN"] = 10] = "NaN";
-  NumberSymbol2[NumberSymbol2["TimeSeparator"] = 11] = "TimeSeparator";
-  NumberSymbol2[NumberSymbol2["CurrencyDecimal"] = 12] = "CurrencyDecimal";
-  NumberSymbol2[NumberSymbol2["CurrencyGroup"] = 13] = "CurrencyGroup";
-})(NumberSymbol || (NumberSymbol = {}));
+var NumberSymbol = {
+  /**
+   * Decimal separator.
+   * For `en-US`, the dot character.
+   * Example: 2,345`.`67
+   */
+  Decimal: 0,
+  /**
+   * Grouping separator, typically for thousands.
+   * For `en-US`, the comma character.
+   * Example: 2`,`345.67
+   */
+  Group: 1,
+  /**
+   * List-item separator.
+   * Example: "one, two, and three"
+   */
+  List: 2,
+  /**
+   * Sign for percentage (out of 100).
+   * Example: 23.4%
+   */
+  PercentSign: 3,
+  /**
+   * Sign for positive numbers.
+   * Example: +23
+   */
+  PlusSign: 4,
+  /**
+   * Sign for negative numbers.
+   * Example: -23
+   */
+  MinusSign: 5,
+  /**
+   * Computer notation for exponential value (n times a power of 10).
+   * Example: 1.2E3
+   */
+  Exponential: 6,
+  /**
+   * Human-readable format of exponential.
+   * Example: 1.2x103
+   */
+  SuperscriptingExponent: 7,
+  /**
+   * Sign for permille (out of 1000).
+   * Example: 23.4‰
+   */
+  PerMille: 8,
+  /**
+   * Infinity, can be used with plus and minus.
+   * Example: ∞, +∞, -∞
+   */
+  Infinity: 9,
+  /**
+   * Not a number.
+   * Example: NaN
+   */
+  NaN: 10,
+  /**
+   * Symbol used between time units.
+   * Example: 10:52
+   */
+  TimeSeparator: 11,
+  /**
+   * Decimal separator for currency values (fallback to `Decimal`).
+   * Example: $2,345.67
+   */
+  CurrencyDecimal: 12,
+  /**
+   * Group separator for currency values (fallback to `Group`).
+   * Example: $2,345.67
+   */
+  CurrencyGroup: 13
+};
 var WeekDay;
 (function(WeekDay2) {
   WeekDay2[WeekDay2["Sunday"] = 0] = "Sunday";
@@ -2952,6 +3009,7 @@ var _subscribableStrategy = new SubscribableStrategy();
 var _AsyncPipe = class _AsyncPipe {
   constructor(ref) {
     this._latestValue = null;
+    this.markForCheckOnValueUpdate = true;
     this._subscription = null;
     this._obj = null;
     this._strategy = null;
@@ -2966,7 +3024,12 @@ var _AsyncPipe = class _AsyncPipe {
   transform(obj) {
     if (!this._obj) {
       if (obj) {
-        this._subscribe(obj);
+        try {
+          this.markForCheckOnValueUpdate = false;
+          this._subscribe(obj);
+        } finally {
+          this.markForCheckOnValueUpdate = true;
+        }
       }
       return this._latestValue;
     }
@@ -2999,7 +3062,9 @@ var _AsyncPipe = class _AsyncPipe {
   _updateLatestValue(async, value) {
     if (async === this._obj) {
       this._latestValue = value;
-      this._ref.markForCheck();
+      if (this.markForCheckOnValueUpdate) {
+        this._ref?.markForCheck();
+      }
     }
   }
 };
@@ -3649,7 +3714,7 @@ function isPlatformWorkerApp(platformId) {
 function isPlatformWorkerUi(platformId) {
   return platformId === PLATFORM_WORKER_UI_ID;
 }
-var VERSION = new Version("17.2.2");
+var VERSION = new Version("17.3.1");
 var _ViewportScroller = class _ViewportScroller {
 };
 _ViewportScroller.ɵprov = ɵɵdefineInjectable({
@@ -4945,9 +5010,9 @@ export {
 
 @angular/common/fesm2022/common.mjs:
   (**
-   * @license Angular v17.2.2
+   * @license Angular v17.3.1
    * (c) 2010-2022 Google LLC. https://angular.io/
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-EBYPFRY3.js.map
+//# sourceMappingURL=chunk-Q6IENKS4.js.map

@@ -8,7 +8,7 @@ import {
   isPlatformServer,
   parseCookieValue,
   setRootDomAdapter
-} from "./chunk-EBYPFRY3.js";
+} from "./chunk-Q6IENKS4.js";
 import {
   APP_BOOTSTRAP_LISTENER,
   APP_ID,
@@ -84,7 +84,7 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-B5LUOZ3Q.js";
+} from "./chunk-KJBDP7EP.js";
 
 // node_modules/@angular/common/fesm2022/http.mjs
 var HttpHandler = class {
@@ -2095,8 +2095,8 @@ function transferCacheInterceptorFn(req, next) {
     method: requestMethod
   } = req;
   if (!isCacheActive || // POST requests are allowed either globally or at request level
-  requestMethod === "POST" && !globalOptions.includePostRequests && !requestOptions || requestMethod !== "POST" && !ALLOWED_METHODS.includes(requestMethod) || requestOptions === false || //
-  globalOptions.filter?.(req) === false) {
+  requestMethod === "POST" && !globalOptions.includePostRequests && !requestOptions || requestMethod !== "POST" && !ALLOWED_METHODS.includes(requestMethod) || // Do not cache request that require authorization
+  req.headers.has("authorization") || req.headers.has("proxy-authorization") || requestOptions === false || globalOptions.filter?.(req) === false) {
     return next(req);
   }
   const transferState = inject(TransferState);
@@ -4004,7 +4004,7 @@ function provideClientHydration(...features) {
   }
   return makeEnvironmentProviders([typeof ngDevMode !== "undefined" && ngDevMode ? provideZoneJsCompatibilityDetector() : [], withDomHydration(), featuresKind.has(HydrationFeatureKind.NoHttpTransferCache) || hasHttpTransferCacheOptions ? [] : withHttpTransferCache({}), providers]);
 }
-var VERSION = new Version("17.2.2");
+var VERSION = new Version("17.3.1");
 var makeStateKey2 = makeStateKey;
 var TransferState2 = TransferState;
 
@@ -4050,16 +4050,16 @@ export {
 
 @angular/common/fesm2022/http.mjs:
   (**
-   * @license Angular v17.2.2
+   * @license Angular v17.3.1
    * (c) 2010-2022 Google LLC. https://angular.io/
    * License: MIT
    *)
 
 @angular/platform-browser/fesm2022/platform-browser.mjs:
   (**
-   * @license Angular v17.2.2
+   * @license Angular v17.3.1
    * (c) 2010-2022 Google LLC. https://angular.io/
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-6TAVLA7F.js.map
+//# sourceMappingURL=chunk-SH2D65E5.js.map

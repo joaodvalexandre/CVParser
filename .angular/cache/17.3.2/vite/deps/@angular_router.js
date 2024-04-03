@@ -1,6 +1,6 @@
 import {
   Title
-} from "./chunk-6TAVLA7F.js";
+} from "./chunk-SH2D65E5.js";
 import {
   DOCUMENT,
   HashLocationStrategy,
@@ -9,7 +9,7 @@ import {
   LocationStrategy,
   PathLocationStrategy,
   ViewportScroller
-} from "./chunk-EBYPFRY3.js";
+} from "./chunk-Q6IENKS4.js";
 import {
   APP_BOOTSTRAP_LISTENER,
   APP_INITIALIZER,
@@ -112,7 +112,7 @@ import {
   ɵɵloadQuery,
   ɵɵqueryRefresh,
   ɵɵsanitizeUrlOrResourceUrl
-} from "./chunk-B5LUOZ3Q.js";
+} from "./chunk-KJBDP7EP.js";
 
 // node_modules/@angular/router/fesm2022/router.mjs
 var PRIMARY_OUTLET = "primary";
@@ -1954,7 +1954,7 @@ _ɵEmptyOutletComponent.ɵcmp = ɵɵdefineComponent({
   features: [ɵɵStandaloneFeature],
   decls: 1,
   vars: 0,
-  template: function ɵEmptyOutletComponent_Template(rf, ctx) {
+  template: function _EmptyOutletComponent_Template(rf, ctx) {
     if (rf & 1) {
       ɵɵelement(0, "router-outlet");
     }
@@ -3455,12 +3455,16 @@ var _NavigationTransitions = class _NavigationTransitions {
       })),
       // Using switchMap so we cancel executing navigations when a new one comes in
       switchMap((overallTransitionState) => {
-        this.currentTransition = overallTransitionState;
         let completed = false;
         let errored = false;
         return of(overallTransitionState).pipe(
-          // Store the Navigation object
-          tap((t) => {
+          switchMap((t) => {
+            if (this.navigationId > overallTransitionState.id) {
+              const cancellationReason = typeof ngDevMode === "undefined" || ngDevMode ? `Navigation ID ${overallTransitionState.id} is not equal to the current navigation id ${this.navigationId}` : "";
+              this.cancelNavigationTransition(overallTransitionState, cancellationReason, NavigationCancellationCode.SupersededByNewNavigation);
+              return EMPTY;
+            }
+            this.currentTransition = overallTransitionState;
             this.currentNavigation = {
               id: t.id,
               initialUrl: t.rawUrl,
@@ -3471,8 +3475,6 @@ var _NavigationTransitions = class _NavigationTransitions {
                 previousNavigation: null
               })
             };
-          }),
-          switchMap((t) => {
             const urlTransition = !router.navigated || this.isUpdatingInternalState() || this.isUpdatedBrowserUrl();
             const onSameUrlNavigation = t.extras.onSameUrlNavigation ?? router.onSameUrlNavigation;
             if (!urlTransition && onSameUrlNavigation !== "reload") {
@@ -5495,7 +5497,7 @@ function mapToCanDeactivate(providers) {
 function mapToResolve(provider) {
   return (...params) => inject(provider).resolve(...params);
 }
-var VERSION = new Version("17.2.2");
+var VERSION = new Version("17.3.1");
 export {
   ActivatedRoute,
   ActivatedRouteSnapshot,
@@ -5578,7 +5580,7 @@ export {
 
 @angular/router/fesm2022/router.mjs:
   (**
-   * @license Angular v17.2.2
+   * @license Angular v17.3.1
    * (c) 2010-2022 Google LLC. https://angular.io/
    * License: MIT
    *)
