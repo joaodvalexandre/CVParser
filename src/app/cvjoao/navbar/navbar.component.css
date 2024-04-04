@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background: #55d6aa;
+    background: var(--component-color);
     height: 50px;
     position: sticky;
     top: 0;

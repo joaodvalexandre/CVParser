@@ -3,17 +3,17 @@
         "name": "João Alexandre",
         "picture": "/assets/pic.jpg",
         "current_position": "Unemployed",
-        "main_position": "Developer",
+        "main_position": "Web Developer",
         "location": "Albergaria-a-Velha, Aveiro, Portugal",
         "contact": "+351 962 370 926",
         "email": "joao.daniel.alexandre43@gmail.com",
         "description": "Informatic Technician oriented towards Backend, Frontend and Fullstack Development, professional and motivated to learn new technologies, work with new interesting functionalities and always available to help my colleagues.",
         "soft_skills": [
-            "Responsible",
-            "Adaptable",
-            "Problem-Solver",
-            "Resourceful",
-            "Creative"
+            {"skill": "Adaptable",          "description": "Able to learn new technologies with ease, and learn new ways of working."},
+            {"skill": "Creative",           "description": "Create new things, and present new ideas, such as new implementations for the project / task."},
+            {"skill": "Critical Thinker",   "description": "Ease of analysis and evaluation of the issues found at the project / task."},
+            {"skill": "Problem-Solver",     "description": "Quickly find a solution to a problem, by either googling it, or try other ways, that achieve the same end goal."},
+            {"skill": "Responsible",        "description": "Can manage time for delivery, and organization of a certain task for a project."}
         ],
         "skills": [
             "SQL",

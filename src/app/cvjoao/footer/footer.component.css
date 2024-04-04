@@ -9,13 +9,13 @@ footer{
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #55d6aa;
+    background-color: var(--component-color);
     position: -webkit-sticky; /* Safari */
     position: sticky;
 }
 
 .links {
-    background: #55d6aa;
+    background: var(--component-color);
     height: 64px;
     display: flex;
     justify-content: center;
@@ -27,7 +27,7 @@ footer{
 
 .links a {
     color: black;
-    background-color: #55d6aa;
+    background-color: var(--component-color);
     transition: background-color 0.5s ease-in-out;
     border-radius: 50%;
     height: 60px;

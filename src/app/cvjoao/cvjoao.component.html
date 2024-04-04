@@ -14,16 +14,18 @@
             <h1>Hard Skills</h1>
             <div *ngFor="let item of cvFile.information.top5_skills">
                 <span>{{item.skill}}</span>
-                <div class="progress">
-                    <div class="progress-bar green-progress" role="progressbar" [style.width]="item.level+'0%'">
-                        
-                    </div>
+                <div class="progress"><div class="progress-bar green-progress" role="progressbar" [style.width]="item.level+'0%'"></div></div>
+            </div>
+        </div>
+        <div class="soft-skills">
+            <h1>Soft Skills</h1>
+            <div *ngFor="let item of cvFile.information.soft_skills" class="list-soft">
+                <span class="soft">{{item.skill}}</span>
+                <div class="hover-box">
+                    <span>{{item.description}}</span>
                 </div>
             </div>
         </div>
-        <!-- <div class="soft-skills">
-            <h1>Soft Skills</h1>
-        </div> -->
     </div>
     <!-- <div>
         {{cvFile.information.name}}<br>

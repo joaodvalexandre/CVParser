@@ -10,6 +10,8 @@
   --gray-700: oklch(36.98% 0.014 302.71);
   --gray-400: oklch(70.9% 0.015 304.04);
 
+  --component-color: #55d6aa;
+
   --red-to-pink-to-purple-vertical-gradient: linear-gradient(
     180deg,
     var(--orange-red) 0%,
@@ -172,7 +174,7 @@ main {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #55d6aa; 
+  background: var(--component-color); 
 }
 
 ::-webkit-scrollbar-track {
