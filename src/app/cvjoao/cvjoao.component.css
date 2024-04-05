@@ -9,6 +9,10 @@
     font-family: "Metrophobic", sans-serif;
 }
 
+section {
+    margin-bottom: 50px;
+}
+
 .profile-picture {
     max-width: 200px;
     max-height: 200px;
@@ -44,6 +48,7 @@
     align-content: center;
     flex-direction: row;
     flex-wrap: nowrap;
+    gap: 5%;
 }
 
 .main-header span {
@@ -52,10 +57,6 @@
 
 .description {
     width: 60%;
-}
-
-.about-section span {
-    padding-left: 20px;
 }
 
 .name {
@@ -81,6 +82,10 @@
     width: 45%;
 }
 
+.progress {
+    margin-bottom: 10px;
+}
+
 .soft-skills {
     width: 45%;
 }
@@ -96,9 +101,10 @@ h1 {
 
 span {
     font-size: 18px;
+    display: inline-block;
 }
 
-.soft {
+.button-type {
     background: var(--component-color);
     border-radius: 5px;
     padding: 3px 10px;
@@ -142,6 +148,45 @@ span {
     opacity: 1;
     transform: scaleX(1);
     animation: displayBox forwards 0.5s;
+}
+
+.experience {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+    gap: 5%;
+}
+
+.experience-text {
+    flex: 1;
+}
+
+.experience-block {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px var(--component-color) solid;
+    border-radius: 5px;
+    width: 100%;
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+.experience-description {
+    padding: 20px 0;
+}
+
+.experience-tools {
+    margin: 0 10px 10px 0;
+}
+
+.experience-tools-box {
+    margin-bottom: 10px;
 }
 
 @keyframes displayBox {
