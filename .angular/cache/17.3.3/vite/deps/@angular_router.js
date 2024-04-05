@@ -1,6 +1,6 @@
 import {
   Title
-} from "./chunk-SH2D65E5.js";
+} from "./chunk-UNVLV5ZY.js";
 import {
   DOCUMENT,
   HashLocationStrategy,
@@ -9,7 +9,7 @@ import {
   LocationStrategy,
   PathLocationStrategy,
   ViewportScroller
-} from "./chunk-Q6IENKS4.js";
+} from "./chunk-AEJECAXF.js";
 import {
   APP_BOOTSTRAP_LISTENER,
   APP_INITIALIZER,
@@ -112,7 +112,7 @@ import {
   ɵɵloadQuery,
   ɵɵqueryRefresh,
   ɵɵsanitizeUrlOrResourceUrl
-} from "./chunk-KJBDP7EP.js";
+} from "./chunk-DW5SNYKA.js";
 
 // node_modules/@angular/router/fesm2022/router.mjs
 var PRIMARY_OUTLET = "primary";
@@ -1812,6 +1812,7 @@ var OutletInjector = class {
     this.route = route;
     this.childContexts = childContexts;
     this.parent = parent;
+    this.__ngOutletInjector = true;
   }
   get(token, notFoundValue) {
     if (token === ActivatedRoute) {
@@ -4754,21 +4755,21 @@ var _RouterLinkActive = class _RouterLinkActive {
       return;
     queueMicrotask(() => {
       const hasActiveLinks = this.hasActiveLinks();
+      this.classes.forEach((c) => {
+        if (hasActiveLinks) {
+          this.renderer.addClass(this.element.nativeElement, c);
+        } else {
+          this.renderer.removeClass(this.element.nativeElement, c);
+        }
+      });
+      if (hasActiveLinks && this.ariaCurrentWhenActive !== void 0) {
+        this.renderer.setAttribute(this.element.nativeElement, "aria-current", this.ariaCurrentWhenActive.toString());
+      } else {
+        this.renderer.removeAttribute(this.element.nativeElement, "aria-current");
+      }
       if (this._isActive !== hasActiveLinks) {
         this._isActive = hasActiveLinks;
         this.cdr.markForCheck();
-        this.classes.forEach((c) => {
-          if (hasActiveLinks) {
-            this.renderer.addClass(this.element.nativeElement, c);
-          } else {
-            this.renderer.removeClass(this.element.nativeElement, c);
-          }
-        });
-        if (hasActiveLinks && this.ariaCurrentWhenActive !== void 0) {
-          this.renderer.setAttribute(this.element.nativeElement, "aria-current", this.ariaCurrentWhenActive.toString());
-        } else {
-          this.renderer.removeAttribute(this.element.nativeElement, "aria-current");
-        }
         this.isActiveChange.emit(hasActiveLinks);
       }
     });
@@ -5497,7 +5498,7 @@ function mapToCanDeactivate(providers) {
 function mapToResolve(provider) {
   return (...params) => inject(provider).resolve(...params);
 }
-var VERSION = new Version("17.3.1");
+var VERSION = new Version("17.3.3");
 export {
   ActivatedRoute,
   ActivatedRouteSnapshot,
@@ -5580,7 +5581,7 @@ export {
 
 @angular/router/fesm2022/router.mjs:
   (**
-   * @license Angular v17.3.1
+   * @license Angular v17.3.3
    * (c) 2010-2022 Google LLC. https://angular.io/
    * License: MIT
    *)

@@ -113,7 +113,7 @@ span {
 }
 
 .list-soft {
-    height: 66px;
+    height: 57px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -150,7 +150,7 @@ span {
     animation: displayBox forwards 0.5s;
 }
 
-.experience {
+.experience, .education {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -160,11 +160,15 @@ span {
     gap: 5%;
 }
 
-.experience-text {
+.experience-title, .education-title {
+    /* width: 5%; */
+}
+
+.experience-text, .education-text {
     flex: 1;
 }
 
-.experience-block {
+.block {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -177,7 +181,7 @@ span {
     padding: 0 20px;
 }
 
-.experience-description {
+.experience-description, .education-description {
     padding: 20px 0;
 }
 

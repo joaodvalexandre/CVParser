@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 import { ChildrenOutletContexts, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { 
-  slider
-} from './app.animations';
+import { slider } from './app.animations';
 import { NavbarComponent } from './cvjoao/navbar/navbar.component';
 import { FooterComponent } from './cvjoao/footer/footer.component';
 

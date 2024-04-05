@@ -6,14 +6,14 @@ import {
   sequence,
   style,
   ɵPRE_STYLE
-} from "./chunk-IYKQXT2B.js";
+} from "./chunk-DIILQ2CO.js";
 import {
   BrowserModule,
   DomRendererFactory2
-} from "./chunk-SH2D65E5.js";
+} from "./chunk-UNVLV5ZY.js";
 import {
   DOCUMENT
-} from "./chunk-Q6IENKS4.js";
+} from "./chunk-AEJECAXF.js";
 import {
   ANIMATION_MODULE_TYPE,
   ChangeDetectionScheduler,
@@ -32,7 +32,7 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-KJBDP7EP.js";
+} from "./chunk-DW5SNYKA.js";
 
 // node_modules/@angular/animations/fesm2022/browser.mjs
 var LINE_START = "\n - ";
@@ -4145,14 +4145,14 @@ export {
 
 @angular/animations/fesm2022/browser.mjs:
   (**
-   * @license Angular v17.3.1
+   * @license Angular v17.3.3
    * (c) 2010-2022 Google LLC. https://angular.io/
    * License: MIT
    *)
 
 @angular/platform-browser/fesm2022/animations.mjs:
   (**
-   * @license Angular v17.3.1
+   * @license Angular v17.3.3
    * (c) 2010-2022 Google LLC. https://angular.io/
    * License: MIT
    *)

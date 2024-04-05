@@ -32,7 +32,7 @@
             <h1>Experience</h1>
         </div>
         <div class="experience-text">
-            <div *ngFor="let item of cvFile.experiences" class="container experience-block">
+            <div *ngFor="let item of cvFile.experiences" class="container block">
                 <h3>{{item.company_name}}</h3>
                 <span class="experience-position">{{item.position}}</span>
                 <span class="experience-date">{{item.start_date}} - {{item.end_date}}</span>
@@ -44,16 +44,19 @@
             </div>
         </div>
     </section>
+    <section class="education">
+        <div class="education-title">
+            <h1>Education</h1>
+        </div>
+        <div class="education-text">
+            <div *ngFor="let item of cvFile.education" class="container block">
+                <h3>{{item.school_name}}</h3>
+                <span class="education-course">{{item.course}}</span>
+                <span class="education-date">{{item.start_date}} - {{item.end_date}}</span>
+                <span class="education-school-year">Year: {{item.school_year}}</span>
+                <span class="education-final-grade">Final Grade: {{item.final_grade}}</span>
+                <span class="education-description">{{item.description}}</span>
+            </div>
+        </div>
+    </section>
 </div>
-    <!--<ul *ngFor="let item of cvFile.education">
-        <li>
-            <img class="logo" src="{{item.school_logo}}"><br>
-            {{item.school_name}} <br>
-            {{item.course}} <br>
-            {{item.position}} <br>
-            {{item.start_date}} - {{item.end_date}} <br>
-            {{item.school_year}} <br>
-            {{item.final_grade}} <br>
-            {{item.description}} <br>
-        </li>
-    </ul> -->
