@@ -5,7 +5,7 @@ import {
   slider
 } from './app.animations';
 import { NavbarComponent } from './cvjoao/navbar/navbar.component';
-import { FooterComponent } from './cvjoao/footer/footer.component'
+import { FooterComponent } from './cvjoao/footer/footer.component';
 
 @Component({
   selector: 'app-root',
