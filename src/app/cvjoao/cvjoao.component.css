@@ -157,11 +157,11 @@ span {
     align-items: flex-start;
     align-content: flex-start;
     justify-content: flex-start;
-    gap: 5%;
+    gap: 50px;
 }
 
-.experience-title, .education-title {
-    /* width: 5%; */
+.education {
+    gap: 64px;
 }
 
 .experience-text, .education-text {
