@@ -71,6 +71,24 @@
     },
     "experiences": [
         {
+            "company_name": "RedOcean",
+            "position": "Fullstack Developer",
+            "start_date": "04/2022",
+            "end_date": "Current",
+            "location": "Tamengos, Portugal",
+            "description": "Ongoing development and continuous improvement of a web application designed for various local councils to enhance operational efficiency and service delivery. Contributed to performance improvements of a key web application for a specific client, focusing on enhancing speed, reliability, and user experience.",
+            "tools_used": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "jQuery",
+                "SQL",
+                "Yii",
+                "Laravel",
+                "PHP"
+            ]
+        },
+        {
             "company_name": "Synopsys Inc.",
             "position": "Frontend Developer",
             "start_date": "08/2022",
