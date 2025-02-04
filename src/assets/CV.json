@@ -2,7 +2,7 @@
     "information": {
         "name": "João Alexandre",
         "picture": "/assets/pic.jpg",
-        "current_position": "Unemployed",
+        "current_position": "Business Developer",
         "main_position": "Web Developer",
         "location": "Albergaria-a-Velha, Aveiro, Portugal",
         "contact": "+351 962 370 926",
@@ -49,7 +49,8 @@
             "Behat",
             "Gitlab",
             "Full-Stack Development",
-            "Adobe Premiere Pro"
+            "Adobe Premiere Pro",
+            "Laravel"
         ],
         "top5_skills": [
             {"skill": "JavaScript", "level": 8},
@@ -71,10 +72,29 @@
     },
     "experiences": [
         {
+            "company_name": "Grupel",
+            "position": "Business Developer",
+            "start_date": "11/2022",
+            "end_date": "Current",
+            "location": "Vagos, Portugal",
+            "description": "",
+            "tools_used": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "jQuery",
+                "SQL",
+                "Laravel",
+                "TailwindCSS",
+                "Livewire",
+                "PHP"
+            ]
+        },
+        {
             "company_name": "RedOcean",
             "position": "Fullstack Developer",
-            "start_date": "04/2022",
-            "end_date": "Current",
+            "start_date": "04/2024",
+            "end_date": "11/2024",
             "location": "Tamengos, Portugal",
             "description": "Ongoing development and continuous improvement of a web application designed for various local councils to enhance operational efficiency and service delivery. Contributed to performance improvements of a key web application for a specific client, focusing on enhancing speed, reliability, and user experience.",
             "tools_used": [
