@@ -74,10 +74,12 @@
         {
             "company_name": "Grupel",
             "position": "Business Developer",
-            "start_date": "11/2022",
-            "end_date": "Current",
+            "start_date": "11/2024",
+            "end_date": "04/2025",
             "location": "Vagos, Portugal",
-            "description": "",
+            "description": "Developed a full-featured vehicle requisition web application to streamline internal fleet management within the company, improving efficiency and tracking.
+Currently developing a management tool, focused on optimizing purchasing processes and procurement workflows.
+Utilizing Laravel as the core framework, ensuring scalability, security and maintainability.",
             "tools_used": [
                 "HTML",
                 "CSS",
