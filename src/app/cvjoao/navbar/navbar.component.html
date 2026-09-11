@@ -1,11 +1,21 @@
 <header>
     <div class="container">
-        <nav>
+        <button
+            type="button"
+            class="menu-toggle"
+            (click)="toggleMenu()"
+            [attr.aria-expanded]="menuOpen"
+            aria-label="Toggle navigation">
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+        </button>
+        <nav [class.open]="menuOpen">
             <ul>
-                <li><a routerLink="/home"       routerLinkActive="active" (click)="triggerScrollToTop()">Home</a></li>
-                <li><a routerLink="/portfolio"  routerLinkActive="active" (click)="triggerScrollToTop()">Portfolio</a></li>
-                <li><a routerLink="/contacts"   routerLinkActive="active" (click)="triggerScrollToTop()">Contacts</a></li>
-                <li><a routerLink="/about"      routerLinkActive="active" (click)="triggerScrollToTop()">About</a></li>
+                <li><a routerLink="/home"       routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="triggerScrollToTop()">Home</a></li>
+                <li><a routerLink="/portfolio"  routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="triggerScrollToTop()">Portfolio</a></li>
+                <li><a routerLink="/contacts"   routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="triggerScrollToTop()">Contacts</a></li>
+                <li><a routerLink="/about"      routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="triggerScrollToTop()">About</a></li>
             </ul>
         </nav>
     </div>

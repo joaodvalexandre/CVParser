@@ -1,8 +1,8 @@
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
-::ng-deep html, ::ng-deep body {
+:host {
+    display: block;
     height: 100%;
-    margin: 0;
 }
 
 * {
@@ -28,4 +28,29 @@
 
 .icon {
     font-size: 72px;
+}
+
+@media screen and (max-width: 768px) {
+    .body {
+        padding: 24px 16px;
+        justify-content: center;
+    }
+
+    .unavailable {
+        font-size: 24px;
+    }
+
+    .icon {
+        font-size: 56px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .unavailable {
+        font-size: 20px;
+    }
+
+    .icon {
+        font-size: 44px;
+    }
 }

@@ -59,7 +59,7 @@ import {
   ɵɵinject,
   ɵɵinjectAttribute,
   ɵɵstyleProp
-} from "./chunk-DW5SNYKA.js";
+} from "./chunk-KJBDP7EP.js";
 
 // node_modules/@angular/common/fesm2022/common.mjs
 var _DOM = null;
@@ -3714,7 +3714,7 @@ function isPlatformWorkerApp(platformId) {
 function isPlatformWorkerUi(platformId) {
   return platformId === PLATFORM_WORKER_UI_ID;
 }
-var VERSION = new Version("17.3.3");
+var VERSION = new Version("17.3.1");
 var _ViewportScroller = class _ViewportScroller {
 };
 _ViewportScroller.ɵprov = ɵɵdefineInjectable({
@@ -3845,7 +3845,6 @@ var NullViewportScroller = class {
 };
 var XhrFactory = class {
 };
-var PLACEHOLDER_QUALITY = "20";
 function getUrl(src, win) {
   return isAbsoluteUrl(src) ? new URL(src) : new URL(src, win.location.href);
 }
@@ -3911,9 +3910,6 @@ function createCloudflareUrl(path, config) {
   if (config.width) {
     params += `,width=${config.width}`;
   }
-  if (config.isPlaceholder) {
-    params += `,quality=${PLACEHOLDER_QUALITY}`;
-  }
   return `${path}/cdn-cgi/image/${params}/${config.src}`;
 }
 var cloudinaryLoaderInfo = {
@@ -3926,8 +3922,7 @@ function isCloudinaryUrl(url) {
 }
 var provideCloudinaryLoader = createImageLoader(createCloudinaryUrl, ngDevMode ? ["https://res.cloudinary.com/mysite", "https://mysite.cloudinary.com", "https://subdomain.mysite.com"] : void 0);
 function createCloudinaryUrl(path, config) {
-  const quality = config.isPlaceholder ? "q_auto:low" : "q_auto";
-  let params = `f_auto,${quality}`;
+  let params = `f_auto,q_auto`;
   if (config.width) {
     params += `,w_${config.width}`;
   }
@@ -3954,11 +3949,7 @@ function createImagekitUrl(path, config) {
   } else {
     urlSegments = [path, src];
   }
-  const url = new URL(urlSegments.join("/"));
-  if (config.isPlaceholder) {
-    url.searchParams.set("q", PLACEHOLDER_QUALITY);
-  }
-  return url.href;
+  return urlSegments.join("/");
 }
 var imgixLoaderInfo = {
   name: "Imgix",
@@ -3974,9 +3965,6 @@ function createImgixUrl(path, config) {
   url.searchParams.set("auto", "format");
   if (config.width) {
     url.searchParams.set("w", config.width.toString());
-  }
-  if (config.isPlaceholder) {
-    url.searchParams.set("q", PLACEHOLDER_QUALITY);
   }
   return url.href;
 }
@@ -4015,10 +4003,6 @@ function createNetlifyUrl(config, path) {
   url.searchParams.set("url", config.src);
   if (config.width) {
     url.searchParams.set("w", config.width.toString());
-  }
-  const configQuality = config.loaderParams?.["quality"] ?? config.loaderParams?.["q"];
-  if (config.isPlaceholder && !configQuality) {
-    url.searchParams.set("q", PLACEHOLDER_QUALITY);
   }
   for (const [param, value] of Object.entries(config.loaderParams ?? {})) {
     if (validParams.has(param)) {
@@ -5026,9 +5010,9 @@ export {
 
 @angular/common/fesm2022/common.mjs:
   (**
-   * @license Angular v17.3.3
+   * @license Angular v17.3.1
    * (c) 2010-2022 Google LLC. https://angular.io/
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-AEJECAXF.js.map
+//# sourceMappingURL=chunk-Q6IENKS4.js.map

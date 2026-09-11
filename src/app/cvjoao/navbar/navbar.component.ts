@@ -12,8 +12,14 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 export class NavbarComponent {
   @Output() scrollToTopEvent = new EventEmitter<void>();
+  menuOpen = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
 
   triggerScrollToTop() {
+    this.menuOpen = false;
     this.scrollToTopEvent.emit();
   }
 }

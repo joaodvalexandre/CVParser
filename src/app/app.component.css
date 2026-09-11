@@ -34,6 +34,17 @@
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  --shell-chrome: 134px;
+}
+
+app-navbar,
+app-footer {
+  flex-shrink: 0;
 }
 
 h1 {
@@ -56,9 +67,10 @@ p {
 main {
   box-sizing: inherit;
   position: relative;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
-  height: calc(100% - 134px);
+  flex: 1 1 auto;
+  min-height: 0;
 }
 
 .angular-logo {

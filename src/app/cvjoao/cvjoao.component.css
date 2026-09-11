@@ -1,8 +1,7 @@
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
-::ng-deep html, ::ng-deep body {
-    height: 100%;
-    margin: 0;
+:host {
+    display: block;
 }
 
 * {
@@ -34,7 +33,7 @@ section {
     align-content: flex-start;
     flex-direction: column;
     flex-wrap: nowrap;
-    height: calc(100vh - 134px);
+    min-height: calc(100vh - var(--shell-chrome, 134px));
     background-image: url('../../assets/pics/background.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -203,5 +202,133 @@ span {
     }
     100%{
         transform: scaleX(1);
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .name {
+        font-size: 52px;
+    }
+
+    .main-position {
+        font-size: 34px;
+        padding-bottom: 120px;
+    }
+
+    .main-header span {
+        padding-left: 48px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-header {
+        min-height: calc(100dvh - var(--shell-chrome, 134px));
+        height: auto;
+        padding: 24px 0;
+    }
+
+    .main-header span {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .name {
+        font-size: 40px;
+        line-height: 1.1;
+    }
+
+    .main-position {
+        font-size: 26px;
+        padding-bottom: 48px;
+    }
+
+    .about-section {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .about-section h1 {
+        width: 100%;
+    }
+
+    .description {
+        width: 100%;
+    }
+
+    .hard-skills,
+    .soft-skills {
+        width: 100%;
+    }
+
+    .hard-soft-skills {
+        gap: 32px;
+    }
+
+    .experience,
+    .education {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .experience-title,
+    .education-title {
+        width: 100%;
+    }
+
+    .list-soft {
+        height: auto;
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 12px;
+    }
+
+    .hover-box {
+        display: block;
+        opacity: 1;
+        transform: none;
+        position: static;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 6px;
+    }
+
+    .container {
+        padding: 20px 16px;
+    }
+
+    .block {
+        padding: 0 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .name {
+        font-size: 32px;
+    }
+
+    .main-position {
+        font-size: 20px;
+        padding-bottom: 32px;
+    }
+
+    .main-header span {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    span {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .profile-picture {
+        max-width: 160px;
+        max-height: 160px;
     }
 }

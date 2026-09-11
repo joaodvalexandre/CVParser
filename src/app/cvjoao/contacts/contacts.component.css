@@ -1,8 +1,8 @@
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
-::ng-deep html, ::ng-deep body {
+:host {
+    display: block;
     height: 100%;
-    margin: 0;
 }
 
 * {
@@ -74,4 +74,53 @@ a:hover i {
 
 a:hover{
     color:black;
+}
+
+@media screen and (max-width: 768px) {
+    .centered {
+        padding: 16px;
+    }
+
+    .card-block {
+        width: 100%;
+        max-width: 420px;
+        padding: 24px 16px;
+    }
+
+    .card-block > a {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        font-size: 15px;
+        word-break: break-word;
+    }
+
+    .links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 8px;
+    }
+
+    .links a {
+        width: auto;
+        min-width: 64px;
+        padding: 8px;
+    }
+
+    .links a + a {
+        border-left: none;
+        padding-left: 8px;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .icon-link {
+        font-size: 24px;
+    }
+
+    .card-block > a {
+        font-size: 14px;
+    }
 }

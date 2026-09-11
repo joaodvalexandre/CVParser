@@ -12740,7 +12740,7 @@ function createRootComponent(componentView, rootComponentDef, rootDirectives, ho
 }
 function setRootNodeAttributes(hostRenderer, componentDef, hostRNode, rootSelectorOrNode) {
   if (rootSelectorOrNode) {
-    setUpAttributes(hostRenderer, hostRNode, ["ng-version", "17.3.3"]);
+    setUpAttributes(hostRenderer, hostRNode, ["ng-version", "17.3.1"]);
   } else {
     const { attrs, classes } = extractAttrsAndClassesFromSelector(componentDef.selectors[0]);
     if (attrs) {
@@ -15051,9 +15051,6 @@ function renderDeferBlockState(newState, tNode, lContainer, skipTimerScheduling 
     }
   }
 }
-function isRouterOutletInjector(currentInjector) {
-  return currentInjector instanceof ChainedInjector && currentInjector.injector.__ngOutletInjector;
-}
 function applyDeferBlockState(newState, lDetails, lContainer, tNode, hostLView) {
   const stateTmplIndex = getTemplateIndexForState(newState, hostLView, tNode);
   if (stateTmplIndex !== null) {
@@ -15069,12 +15066,12 @@ function applyDeferBlockState(newState, lDetails, lContainer, tNode, hostLView) 
       const providers = tDetails.providers;
       if (providers && providers.length > 0) {
         const parentInjector = hostLView[INJECTOR];
-        const parentEnvInjector = isRouterOutletInjector(parentInjector) ? parentInjector : parentInjector.get(EnvironmentInjector);
+        const parentEnvInjector = parentInjector.get(EnvironmentInjector);
         injector = parentEnvInjector.get(CachedInjectorService).getOrCreateInjector(tDetails, parentEnvInjector, providers, ngDevMode ? "DeferBlock Injector" : "");
       }
     }
     const dehydratedView = findMatchingDehydratedView(lContainer, activeBlockTNode.tView.ssrId);
-    const embeddedLView = createAndRenderEmbeddedLView(hostLView, activeBlockTNode, null, { dehydratedView, injector });
+    const embeddedLView = createAndRenderEmbeddedLView(hostLView, activeBlockTNode, null, { dehydratedView, embeddedViewInjector: injector });
     addLViewToLContainer(lContainer, embeddedLView, viewIndex, shouldAddViewToDom(activeBlockTNode, dehydratedView));
     markViewDirty(embeddedLView);
   }
@@ -20066,7 +20063,7 @@ var Version = class {
     this.patch = parts.slice(2).join(".");
   }
 };
-var VERSION = new Version("17.3.3");
+var VERSION = new Version("17.3.1");
 var _Console = class _Console {
   log(message) {
     console.log(message);
@@ -20438,10 +20435,8 @@ function getInjectorParent(injector) {
     lView = getNodeInjectorLView(injector);
   } else if (injector instanceof NullInjector) {
     return null;
-  } else if (injector instanceof ChainedInjector) {
-    return injector.parentInjector;
   } else {
-    throwError2("getInjectorParent only support injectors of type R3Injector, NodeInjector, NullInjector, ChainedInjector");
+    throwError2("getInjectorParent only support injectors of type R3Injector, NodeInjector, NullInjector");
   }
   const parentLocation = getParentInjectorLocation(tNode, lView);
   if (hasParentInjector(parentLocation)) {
@@ -20469,8 +20464,8 @@ function getModuleInjectorOfNodeInjector(injector) {
   } else {
     throwError2("getModuleInjectorOfNodeInjector must be called with a NodeInjector");
   }
-  const inj = lView[INJECTOR];
-  const moduleInjector = inj instanceof ChainedInjector ? inj.parentInjector : inj.parent;
+  const chainedInjector = lView[INJECTOR];
+  const moduleInjector = chainedInjector.parentInjector;
   if (!moduleInjector) {
     throwError2("NodeInjector must have some connection to the module injector tree");
   }
@@ -24527,14 +24522,14 @@ export {
 
 @angular/core/fesm2022/primitives/signals.mjs:
   (**
-   * @license Angular v17.3.3
+   * @license Angular v17.3.1
    * (c) 2010-2022 Google LLC. https://angular.io/
    * License: MIT
    *)
 
 @angular/core/fesm2022/core.mjs:
   (**
-   * @license Angular v17.3.3
+   * @license Angular v17.3.1
    * (c) 2010-2022 Google LLC. https://angular.io/
    * License: MIT
    *)
@@ -24566,4 +24561,4 @@ export {
    * found in the LICENSE file at https://angular.io/license
    *)
 */
-//# sourceMappingURL=chunk-DW5SNYKA.js.map
+//# sourceMappingURL=chunk-KJBDP7EP.js.map
